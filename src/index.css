@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* UrjaMitra Energy Theme - Light Mode */
+    --background: 43 100% 98%;
+    --foreground: 160 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Primary: Deep Forest Green (trust & sustainability) */
+    --primary: 152 70% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary: Warm Solar Orange */
+    --secondary: 35 95% 60%;
+    --secondary-foreground: 160 30% 15%;
+
+    /* Muted: Light Energy Blue */
+    --muted: 200 30% 96%;
+    --muted-foreground: 160 20% 45%;
+
+    /* Accent: Bright Solar Yellow */
+    --accent: 45 100% 65%;
+    --accent-foreground: 160 30% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 152 20% 88%;
+    --input: 152 20% 88%;
+    --ring: 152 70% 25%;
+
+    /* Energy Theme Colors */
+    --energy-green: 140 65% 45%;
+    --energy-green-light: 140 60% 85%;
+    --energy-blue: 200 80% 50%;
+    --energy-blue-light: 200 60% 90%;
+    --energy-orange: 35 95% 60%;
+    --energy-orange-light: 35 80% 88%;
+    --energy-yellow: 45 100% 65%;
+
+    /* Gradients */
+    --gradient-sunrise: linear-gradient(135deg, hsl(45 100% 65%) 0%, hsl(35 95% 60%) 50%, hsl(25 85% 55%) 100%);
+    --gradient-energy: linear-gradient(135deg, hsl(152 70% 25%) 0%, hsl(140 65% 45%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(200 80% 50%) 0%, hsl(210 70% 60%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(43 100% 98%) 0%, hsl(200 30% 96%) 100%);
+
+    /* Shadows with energy theme */
+    --shadow-energy: 0 10px 30px -10px hsl(152 70% 25% / 0.2);
+    --shadow-glow: 0 0 40px hsl(45 100% 65% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(152 20% 60% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* UrjaMitra Energy Theme - Dark Mode */
+    --background: 160 40% 8%;
+    --foreground: 43 30% 90%;
+
+    --card: 160 35% 12%;
+    --card-foreground: 43 30% 90%;
+
+    --popover: 160 35% 12%;
+    --popover-foreground: 43 30% 90%;
+
+    --primary: 152 60% 55%;
+    --primary-foreground: 160 40% 8%;
+
+    --secondary: 35 85% 50%;
+    --secondary-foreground: 160 40% 8%;
+
+    --muted: 160 25% 18%;
+    --muted-foreground: 43 15% 65%;
+
+    --accent: 45 90% 55%;
+    --accent-foreground: 160 40% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 43 30% 90%;
+
+    --border: 160 25% 20%;
+    --input: 160 25% 20%;
+    --ring: 152 60% 55%;
+
+    /* Energy Theme Colors - Dark Mode */
+    --energy-green: 140 55% 50%;
+    --energy-green-light: 140 40% 25%;
+    --energy-blue: 200 70% 55%;
+    --energy-blue-light: 200 40% 25%;
+    --energy-orange: 35 85% 55%;
+    --energy-orange-light: 35 60% 25%;
+    --energy-yellow: 45 90% 60%;
+
+    /* Dark Mode Gradients */
+    --gradient-sunrise: linear-gradient(135deg, hsl(45 90% 60%) 0%, hsl(35 85% 55%) 50%, hsl(25 80% 50%) 100%);
+    --gradient-energy: linear-gradient(135deg, hsl(152 60% 55%) 0%, hsl(140 55% 50%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(200 70% 55%) 0%, hsl(210 60% 50%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(160 40% 8%) 0%, hsl(160 25% 18%) 100%);
+
+    /* Dark Mode Shadows */
+    --shadow-energy: 0 10px 30px -10px hsl(152 60% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 90% 60% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
